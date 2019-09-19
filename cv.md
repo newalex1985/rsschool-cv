@@ -27,5 +27,8 @@
           );
         }
       }
-      
+
    ```
+6. Portfolio (projects): https://newalex1985.github.io/presentations/cv/.
+7. **Belarusian State University of Informatics and Radioelectronics**, **Belarusian State Economic University**, **The Rolling Scopes School/RS 2019 Q1 (JavaScript)**, continuous self-education.
+8. **Pre-intermediate**. Previously I took some courses, currently I'm engaged in self-education, in the future I plan to go on the English courses.
