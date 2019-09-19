@@ -1,1 +1,1 @@
-# rsschool-cv
+https://newalex1985.github.io/rsschool-cv/cv
