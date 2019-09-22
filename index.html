@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Konan Aiaksandr cv</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="block">
+      <h1>Konan Aliaksandr</h1>
+      <img src="photo.jpg" alt="Konan Aliaksandr">
+      <ul>
+        <li><a href="mailto:newalex1985@tut.by">email: newalex1985@tut.by</a></li>
+        <li><a href="tel:375295742329">phone: +375-29-574-23-29</a></li>
+        <li><a href="skype:+ganoffbala?call">skype: ganoffbala</a></li>
+        <li><a href="https://goo.gl/maps/L5cxQzdR5PT2" target="_blank">location: Minsk, Belarus</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="block">
+        <h2>Summary</h2>
+        <p>
+          Hello, my name is Aliaksandr Konan. My goal is to study JS. I like to solve technical problems. I set goals
+          for myself and put the maximum amount of effort to achieve of it. Solving complex problems, continuous
+          self-development gives me pleasure and allows me to find self-realization in life.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="block">
+        <h2>My Skills</h2>
+        <ul>
+          <li>JavaScript(ES5/ES2015)</li>
+          <li>React-Redux</li>
+          <li>Git</li>
+          <li>Agile-Scrum</li>
+          <li>1C Development</li>
+          <li>C, Asm for embedded systems</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="block">
+        <h2>Code examples</h2>
+        <pre>
+        	<code>
+              export default class SwapiService {
+
+                _apiBase = 'https://swapi.co/api';
+                _imageBase = 'https://starwars-visualguide.com/assets/img';
+              
+                getResource = async (url) => {
+              
+                  const res = await fetch(`${this._apiBase}${url}`);
+              
+                  if (!res.ok) {
+                    throw new Error(`Could not fetch ${url},
+                    received ${res.status}`);
+                  }
+              
+                  return await res.json();
+                };
+              
+                getAllPeople = async () => {
+                  const res = await this.getResource(`/people/`);
+                  return res.results.map(this._transformPerson);
+                };
+                
+                 getPerson = async (id) => {
+                  const person = await this.getResource(`/people/${id}/`);
+                  return this._transformPerson(person);
+                };
+              
+                getAllPlanets = async () => {
+                  const res = await this.getResource(`/planets/`);
+                  return res.results.map(this._transformPlanet);
+                };
+              
+                getPlanet = async (id) => {
+                  const planet = await this.getResource(`/planets/${id}/`);
+                  return this._transformPlanet(planet);
+                };
+              
+                getAllStarships = async () => {
+                  const res = await this.getResource(`/starships/`);
+                  return res.results.map(this._transformStarship);
+                };
+              
+                getStarship = async (id) => {
+                  const starchip = await this.getResource(`/starships/${id}/`);
+                  return this._transformStarship(starchip);
+                };
+              
+                getPersonImage = ({ id }) => {
+                  return `${this._imageBase}/characters/${id}.jpg`;
+                };
+            
+                getStarshipImage = ({ id }) => {
+                  return `${this._imageBase}/starships/${id}.jpg`;
+                };
+            
+                getPlanetImage = ({ id }) => {
+                  return `${this._imageBase}/planets/${id}.jpg`;
+                };
+            
+                _extractId = (item) => {
+                  const idRegExp = /\/([0-9]*)\/$/;
+                  return item.url.match(idRegExp)[1];
+                };
+            
+                _transformPlanet = (planet) => {
+                  return {
+                    id: this._extractId(planet),
+                    name: planet.name,
+                    population: planet.population,
+                    rotationPerid: planet.rotation_period,
+                    diameter: planet.diameter
+                  };
+                };
+            
+                _transformStarship = (starship) => {
+                  return {
+                    id: this._extractId(starship),
+                    name: starship.name,
+                    model: starship.model,
+                    manufacturer: starship.manufacturer,
+                    costInCredits: starship.cost_in_credits,
+                    length: starship.length,
+                    crew: starship.crew,
+                    passengers: starship.passengers,
+                    cargoCapacity: starship.cargoCapacity
+                  };
+                };
+            
+                _transformPerson = (person) => {
+                  return {
+                    id: this._extractId(person),
+                    name: person.name,
+                    gender: person.gender,
+                    birthYear: person.birth_year,
+                    eyeColor: person.eye_color
+                  };
+                };
+            
+              }
+          </code>
+        </pre>
+      </div>
+    </section>
+    <section>
+      <div class="block">
+        <h2>My Experience</h2>
+        <p>
+          Portfolio (projects): <a
+            href="https://newalex1985.github.io/presentations/cv/">https://newalex1985.github.io/presentations/cv/</a>.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="block">
+        <h2>Education</h2>
+        <p>
+          Belarusian State University of Informatics and Radioelectronics, Belarusian State Economic University,
+          The Rolling Scopes School/RS 2019 Q1 (JavaScript), continuous self-education.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="block">
+        <h2>English</h2>
+        <p>
+          Pre-intermediate. Previously I took some courses, currently I’m engaged in self-education,
+          in the future I plan to go on the English courses.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
