@@ -1,4 +1,59 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+header > .block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #ccc;
+}
+
+.block {
+  width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px dotted #333;
+}
+
 header img {
 	border-radius: 50%;
 	width: 15%;
+}
+
+header ul {
+	list-style: none;
+}
+
+header li {
+	margin: 3px 0;
+}
+
+header a {
+	text-decoration: none;
+	color: #6e6e6e;
+	font-size: 14px;
+}
+
+header a:hover {
+	color: red;
+}
+
+h1 {
+	font-size: 35px;
+	font-style: italic;
+}
+
+h2 {
+	font-style: italic;
+	font-size: 24px;
+}
+
+p {
+	font-size: 15px;
+}
+
+pre {
+    background: #ccc;
+    padding: 5px 20px;
 }
